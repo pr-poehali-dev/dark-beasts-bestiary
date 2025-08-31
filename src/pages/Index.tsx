@@ -65,7 +65,9 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-gothic-charcoal to-gothic-black">
         <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M50 5L55 35L85 35L65 55L75 85L50 70L25 85L35 55L15 35L45 35Z" fill="%23ffd700" /%3E%3C/svg%3E')] bg-repeat opacity-20"></div>
+          <div className="w-full h-full bg-repeat opacity-20" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 5L55 35L85 35L65 55L75 85L50 70L25 85L35 55L15 35L45 35Z' fill='%23ffd700' /%3E%3C/svg%3E")`
+          }}></div>
         </div>
         <div className="container mx-auto px-4 text-center relative">
           <div className="max-w-4xl mx-auto">

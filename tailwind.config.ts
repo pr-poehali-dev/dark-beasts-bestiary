@@ -18,7 +18,23 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'gothic': ['Cinzel', 'serif'],
+				'parchment': ['Cinzel Decorative', 'serif'],
+				'body': ['Cormorant Garamond', 'serif']
+			},
 			colors: {
+				// Gothic color scheme
+				'gothic-black': '#000000',
+				'gothic-charcoal': '#1a1a1a',
+				'gothic-gray': '#2d2d2d',
+				'gothic-crimson': '#8b0000',
+				'gothic-burgundy': '#722f37',
+				'gothic-gold': '#ffd700',
+				'gothic-amber': '#d4af37',
+				'parchment': '#f4f1e8',
+				'parchment-dark': '#e8dcc0',
+				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -69,6 +85,18 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'flicker': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glow': {
+					'0%, 100%': { textShadow: '0 0 10px #ffd700, 0 0 20px #ffd700' },
+					'50%': { textShadow: '0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -87,6 +115,9 @@ export default {
 				}
 			},
 			animation: {
+				'flicker': 'flicker 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}

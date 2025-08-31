@@ -1,23 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 5%;
+    --foreground: 45 100% 80%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 45 100% 80%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 100% 27%;
+    --primary-foreground: 45 100% 90%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 45 100% 80%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -96,6 +98,35 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gothic-black text-gothic-gold font-body;
+    background-image:
+      radial-gradient(
+        circle at 25% 25%,
+        rgba(139, 0, 0, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 75% 75%,
+        rgba(255, 215, 0, 0.05) 0%,
+        transparent 50%
+      );
+  }
+
+  .parchment-bg {
+    background-image:
+      linear-gradient(45deg, #f4f1e8 25%, transparent 25%),
+      linear-gradient(-45deg, #f4f1e8 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #e8dcc0 75%),
+      linear-gradient(-45deg, transparent 75%, #e8dcc0 75%);
+    background-size: 20px 20px;
+    background-position:
+      0 0,
+      0 10px,
+      10px -10px,
+      -10px 0px;
+  }
+
+  .gothic-border {
+    border-image: linear-gradient(45deg, #ffd700, #8b0000, #ffd700) 1;
   }
 }
